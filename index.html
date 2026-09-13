@@ -1,0 +1,202 @@
+  <!-- Play CDN: descarga Tailwind y genera las clases que uses, sin build step -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<!-- cierre de head -->
+</head>
+<header class="bg-slate-900 text-white flex flex-col gap-4
+  md:flex-row md:items-center md:justify-between
+  px-6 py-6 md:px-10">
+  <!-- div: agrupa el nombre y el subtítulo para que viajen juntos -->
+  <div>
+    <!-- text-2xl: tamaño de letra en celular · md:text-3xl: más grande desde 768px · font-bold: negrita -->
+    <h1 class="text-2xl md:text-3xl font-bold">Hannia Lopez Sanchez</h1>
+    <!-- text-slate-300: gris claro para diferenciarlo del título · mt-1: margen chico arriba -->
+    <p class="text-slate-300 mt-1">[Estudiante de Desarrollo Web · UTH]</p>
+  <!-- cierre del div de nombre/subtítulo -->
+  </div>
+  <!-- nav: agrupa los enlaces de navegación interna -->
+  <nav>
+    <!-- flex: enlaces en fila · gap-5: separación entre ellos · flex-wrap: bajan de línea si no entran -->
+    <!-- text-sm font-semibold: letra chica y semi-negrita, típico de un menú -->
+    <ul class="flex gap-5 flex-wrap text-sm font-semibold">
+      <!-- li + a: cada enlace cambia a verde (hover:text-emerald-400) al pasar el mouse -->
+      <li><a class="hover:text-emerald-400" href="#sobre-mi">Sobre mí</a></li>
+      <!-- mismo patrón de clase, salta a la sección "skills" -->
+      <li><a class="hover:text-emerald-400" href="#skills">Skills</a></li>
+      <!-- salta a la nueva sección "proyectos" que agregás en este paso -->
+      <li><a class="hover:text-emerald-400" href="#proyectos">Proyectos</a></li>
+      <!-- salta al footer con id="contacto" -->
+      <li><a class="hover:text-emerald-400" href="#contacto">Contacto</a></li>
+    <!-- cierre de la lista de enlaces -->
+    </ul>
+  <!-- cierre de nav -->
+  </nav>
+<!-- cierre de header -->
+</header>
+<!-- section id="sobre-mi": acá aterriza el enlace "Sobre mí" del nav -->
+<!-- max-w-5xl mx-auto: limita el ancho del contenido y lo centra -->
+<!-- px-6 py-14: relleno horizontal y vertical de la sección -->
+<!-- grid grid-cols-1 md:grid-cols-2: una columna en celular, dos desde 768px -->
+<!-- gap-8: separación entre columnas · items-center: centra verticalmente el contenido de cada columna -->
+<section id="sobre-mi"
+  class="max-w-5xl mx-auto px-6 py-14
+    grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+  <!-- primera columna: título y texto de presentación -->
+  <div>
+    <!-- text-2xl font-bold: título de sección · mb-3: margen abajo antes del texto -->
+    <h2 class="text-2xl font-bold mb-3">Sobre mí</h2>
+    <!-- text-slate-600: gris para el cuerpo de texto · leading-relaxed: más espacio entre líneas -->
+    <p class="text-slate-600 leading-relaxed">
+      Estudio Ing. de software multiplataforma, tome la especialidad de software buscando desarrollar programas de apoyo en sistemas financieros personales como empresariales.
+
+    </p>
+  <!-- cierre de la primera columna -->
+  </div>
+  <!-- segunda columna: podés usar una foto, un ícono o una cita destacada -->
+  <!-- bg-slate-50: fondo gris muy claro para diferenciarla del fondo blanco de la página -->
+  <!-- rounded-2xl: esquinas bien redondeadas · p-6: relleno interno · border border-slate-200: borde sutil -->
+  <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+    <!-- text-slate-500 text-sm: texto gris y chico, de relleno hasta que agregues contenido real -->
+   
+      <img src="fotografia_fondo_blanco.jpg" alt="Fotografía de Hannia" class="w-full rounded-xl">
+  <!-- cierre de la segunda columna -->
+  </div>
+<!-- cierre de la sección "sobre-mi" -->
+</section>
+<!-- section id="skills": acá aterriza el enlace "Skills" del nav -->
+<!-- bg-slate-50: fondo gris muy claro que separa visualmente esta sección de "sobre-mi" -->
+<!-- py-14: relleno vertical de la sección -->
+<section id="skills" class="bg-slate-50 py-14">
+  <!-- div interno: max-w-5xl mx-auto centra y limita el ancho, igual que en "sobre-mi" -->
+  <div class="max-w-5xl mx-auto px-6">
+    <!-- título de la sección, mismo estilo que "Sobre mí" -->
+    <h2 class="text-2xl font-bold mb-6">Skills</h2>
+    <!-- grid-cols-1 sm:grid-cols-2 md:grid-cols-3: 1 columna en celular, 2 en tablet (sm), 3 en escritorio (md) -->
+    <!-- gap-5: separación entre tarjetas -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      <!-- primera tarjeta: fondo blanco, borde, esquinas redondeadas y relleno -->
+      <!-- shadow-sm hover:shadow-md transition: sombra leve que crece suavemente al pasar el mouse -->
+      <article class="bg-white rounded-xl border border-slate-200 p-5
+        shadow-sm hover:shadow-md transition">
+        <!-- font-semibold: nombre de la skill en semi-negrita · mb-1: margen chico abajo -->
+        <h3 class="font-semibold mb-1">HTML5</h3>
+        <!-- text-sm text-slate-500: descripción breve, más chica y gris que el título -->
+        <p class="text-sm text-slate-500">Estructura semántica de páginas web.</p>
+      <!-- cierre de la primera tarjeta -->
+      </article>
+      <!-- segunda tarjeta: mismas clases exactas, solo cambia el contenido -->
+      <article class="bg-white rounded-xl border border-slate-200 p-5
+        shadow-sm hover:shadow-md transition">
+        <h3 class="font-semibold mb-1">Tailwind CSS</h3>
+        <p class="text-sm text-slate-500">Estilos responsivos utility-first.</p>
+      <!-- cierre de la segunda tarjeta -->
+      </article>
+      <!-- tercera tarjeta: mismo patrón otra vez -->
+      <article class="bg-white rounded-xl border border-slate-200 p-5
+        shadow-sm hover:shadow-md transition">
+        <h3 class="font-semibold mb-1">Git & GitHub</h3>
+        <p class="text-sm text-slate-500">Control de versiones y despliegue.</p>
+      <!-- cierre de la tercera tarjeta -->
+      </article>
+    <!-- cierre de la grilla de skills -->
+    </div>
+  <!-- cierre del div interno -->
+  </div>
+<!-- cierre de la sección "skills" -->
+</section>
+<!-- section id="proyectos": acá aterriza el enlace "Proyectos" del nav -->
+<!-- max-w-5xl mx-auto px-6 py-14: mismo contenedor centrado que las secciones anteriores -->
+<section id="proyectos" class="max-w-5xl mx-auto px-6 py-14">
+  <!-- título de sección, mismo estilo que "Sobre mí" y "Skills" -->
+  <h2 class="text-2xl font-bold mb-6">Proyectos</h2>
+  <!-- grid-cols-1 md:grid-cols-2: una columna en celular, dos desde 768px · gap-6: separación entre tarjetas -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- rounded-2xl border p-6: tarjeta con esquinas bien redondeadas, borde y relleno -->
+    <!-- shadow-sm hover:shadow-lg: sombra leve que crece bastante al pasar el mouse -->
+    <!-- hover:-translate-y-1: la tarjeta "flota" un poco hacia arriba · transition: suaviza ambos cambios -->
+    <article class="bg-white rounded-2xl border border-slate-200 p-6
+      shadow-sm hover:shadow-lg hover:-translate-y-1 transition">
+      <!-- text-lg font-bold: nombre del proyecto, más grande que el de skills · mb-2: margen abajo -->
+      <h3 class="text-lg font-bold mb-2">[Nombre del proyecto]</h3>
+      <!-- text-slate-600 text-sm: descripción breve · mb-4: margen antes del enlace -->
+      <p class="text-slate-600 text-sm mb-4">[Qué resuelve, en una frase.]</p>
+      <!-- text-emerald-700: enlace en verde · hover:underline: subrayado solo al pasar el mouse -->
+      <a href="#" class="text-emerald-700 font-semibold text-sm hover:underline">Ver repositorio →</a>
+    <!-- cierre de la tarjeta de proyecto -->
+    </article>
+  <!-- cierre de la grilla de proyectos -->
+  </div>
+<!-- cierre de la sección "proyectos" -->
+</section>
+<!-- footer id="contacto": acá aterriza el enlace "Contacto" del nav -->
+<!-- bg-slate-900 text-white: mismo tono oscuro que el header, para cerrar la página con el mismo color -->
+<footer id="contacto" class="bg-slate-900 text-white py-14">
+  <!-- max-w-xl mx-auto: contenedor más angosto que las otras secciones, cómodo para un formulario -->
+  <div class="max-w-xl mx-auto px-6">
+    <!-- título de sección, mismo estilo que las anteriores -->
+    <h2 class="text-2xl font-bold mb-6">Contacto</h2>
+
+    <!-- form: space-y-4 agrega separación vertical automática entre cada div hijo directo -->
+    <form class="space-y-4">
+      <!-- div: agrupa la etiqueta y el campo de "Nombre" -->
+      <div>
+        <!-- block: el label ocupa su propia línea, arriba del input · text-sm font-semibold: letra chica y semi-negrita -->
+        <label for="nombre" class="block text-sm font-semibold mb-1">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          minlength="2"
+          placeholder="Tu nombre"
+          class="w-full rounded-lg bg-slate-800 border border-slate-700
+            px-4 py-2 text-white placeholder-slate-500
+            focus:outline-none focus:ring-2 focus:ring-emerald-400">
+      <!-- cierre del div de "Nombre" -->
+      </div>
+
+      <!-- div: agrupa la etiqueta y el campo de "Correo" -->
+      <div>
+        <label for="correo" class="block text-sm font-semibold mb-1">Correo</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          required
+          placeholder="tu@correo.com"
+          class="w-full rounded-lg bg-slate-800 border border-slate-700
+            px-4 py-2 text-white placeholder-slate-500
+            focus:outline-none focus:ring-2 focus:ring-emerald-400">
+      <!-- cierre del div de "Correo" -->
+      </div>
+
+      <!-- div: agrupa la etiqueta y el campo de "Mensaje" -->
+      <div>
+        <label for="mensaje" class="block text-sm font-semibold mb-1">Mensaje</label>
+        <!-- textarea: campo de varias líneas, no lleva atributo "type" -->
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          required
+          minlength="10"
+          maxlength="500"
+          rows="4"
+          class="w-full rounded-lg bg-slate-800 border border-slate-700
+            px-4 py-2 text-white placeholder-slate-500 resize-none
+            focus:outline-none focus:ring-2 focus:ring-emerald-400"></textarea>
+      <!-- cierre del div de "Mensaje" -->
+      </div>
+
+      <!-- button type="submit": dispara el envío y activa la validación de todos los campos de arriba -->
+      <button type="submit"
+        class="bg-emerald-600 hover:bg-emerald-700 transition
+          text-white font-semibold px-6 py-2.5 rounded-lg
+          focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-900">
+        Enviar
+      <!-- cierre de button -->
+      </button>
+    <!-- cierre del form -->
+    </form>
+  <!-- cierre del div contenedor -->
+  </div>
+<!-- cierre de footer -->
+</footer>
