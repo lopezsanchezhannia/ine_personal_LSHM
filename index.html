@@ -25,7 +25,7 @@
     <!-- text-2xl: tamaño de letra en celular · md:text-3xl: más grande desde 768px · font-bold: negrita -->
     <h1 class="text-2xl md:text-3xl font-bold">Hannia Lopez Sanchez</h1>
     <!-- text-slate-300: gris claro para diferenciarlo del título · mt-1: margen chico arriba -->
-    <p class="text-slate-300 mt-1">Estudiante de Desarrollo Web · UTH</p>
+    <p class="text-slate-400 mt-1">Estudiante de Desarrollo Web · UTH</p>
   <!-- cierre del div de nombre/subtítulo -->
   </div>
   <!-- nav: agrupa los enlaces de navegación interna -->
@@ -71,7 +71,7 @@
   <!-- rounded-2xl: esquinas bien redondeadas · p-6: relleno interno · border border-slate-200: borde sutil -->
   <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
     <!-- text-slate-500 text-sm: texto gris y chico, de relleno hasta que agregues contenido real -->
-    <img class="rounded-full" src="fotografia_fondo_blanco.jpg" alt="...">
+    <img src="fotografia_fondo_blanco.jpg" class="rounded-lg w-64 h-64 object-cover" alt="...">
   <!-- cierre de la segunda columna -->
   </div>
 <!-- cierre de la sección "sobre-mi" -->
@@ -113,6 +113,7 @@
       <!-- cierre de la tercera tarjeta -->
       
       </article>
+      
     <!-- cierre de la grilla de skills -->
     </div>
   <!-- cierre del div interno -->
@@ -135,13 +136,12 @@
       <!-- text-lg font-bold: nombre del proyecto, más grande que el de skills · mb-2: margen abajo -->
       <h3 class="text-lg font-bold mb-2">InnTime</h3>
       <!-- text-slate-600 text-sm: descripción breve · mb-4: margen antes del enlace -->
-      <p class="text-slate-600 text-sm mb-4">Solucion en estion de propiedades.</p>
+      <p class="text-slate-600 text-sm mb-4">Solucion en gestion de propiedades.</p>
       <!-- text-emerald-700: enlace en verde · hover:underline: subrayado solo al pasar el mouse -->
       <a href="#" class="text-emerald-700 font-semibold text-sm hover:underline">Ver repositorio →</a>
     <!-- cierre de la tarjeta de proyecto -->
     </article>
 
-     
   <!-- cierre de la grilla de proyectos -->
   </div>
 <!-- cierre de la sección "proyectos" -->
@@ -150,12 +150,22 @@
 
     <!-- div contenedor: flex flex-col apila las cajas en columna en celular -->
 <!-- md:flex-row: desde 768px cambia a fila · gap-4: separación entre cajas -->
-<div class="flex flex-col md:flex-row gap-4">
-  <!-- primera caja: fondo verde claro y relleno interno -->
-  <div class="bg-emerald-200 p-4">Caja 1</div>
-  <!-- segunda caja: mismo patrón, un tono de verde más oscuro -->
+ 
+ <div class="flex flex-col md:flex-row gap-4">
+  <div class="bg-sky-500 p-4">Caja 1</div>
   <div class="bg-emerald-300 p-4">Caja 2</div>
-<!-- cierre del div contenedor -->
+</div>
+
+
+<!-- ANTES: bloque suelto al final del body, sin section, textos en inglés -->
+<div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md max-w-sm">
+  <img class="w-16 h-16 rounded-full object-cover border-2 border-indigo-500 shadow-sm"
+    src="fotografia_fondo_blanco.jpg" alt="Student profile photo" />
+  <div>
+    <h3 class="text-lg font-semibold text-gray-900">Hannia Lopez Sanchez</h3>
+    <p class="text-sm font-medium text-indigo-600">Computer Science Engineer</p>
+    <p class="text-xs text-gray-500">ID: #25308</p>
+  </div>
 </div>
 
 <!-- footer id="contacto": acá aterriza el enlace "Contacto" del nav -->
@@ -226,10 +236,13 @@
         Enviar
       <!-- cierre de button -->
       </button>
+
+    
     <!-- cierre del form -->
     </form>
   <!-- cierre del div contenedor -->
   </div>
+
 <!-- cierre de footer -->
 </footer>
 </body>
