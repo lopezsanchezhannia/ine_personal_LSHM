@@ -1,7 +1,22 @@
-  <!-- Play CDN: descarga Tailwind y genera las clases que uses, sin build step -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Play CDN: descarga Tailwind y genera las clases que uses, sin build step -->
   <script src="https://cdn.tailwindcss.com"></script>
 <!-- cierre de head -->
 </head>
+
+    <title>Semana 2 LSHM</title>
+</head>
+<body>
+
+<!-- header: bg-slate-900 fondo oscuro · text-white texto claro -->
+<!-- flex flex-col: apila nombre y nav en columna en celular · gap-4: separación entre ambos -->
+<!-- md:flex-row md:items-center md:justify-between: desde 768px, en fila, centrado y con espacio entre los dos -->
+<!-- px-6 py-6: relleno en celular · md:px-10: más relleno horizontal en escritorio -->
 <header class="bg-slate-900 text-white flex flex-col gap-4
   md:flex-row md:items-center md:justify-between
   px-6 py-6 md:px-10">
@@ -10,7 +25,7 @@
     <!-- text-2xl: tamaño de letra en celular · md:text-3xl: más grande desde 768px · font-bold: negrita -->
     <h1 class="text-2xl md:text-3xl font-bold">Hannia Lopez Sanchez</h1>
     <!-- text-slate-300: gris claro para diferenciarlo del título · mt-1: margen chico arriba -->
-    <p class="text-slate-300 mt-1">[Estudiante de Desarrollo Web · UTH]</p>
+    <p class="text-slate-300 mt-1">Estudiante de Desarrollo Web · UTH</p>
   <!-- cierre del div de nombre/subtítulo -->
   </div>
   <!-- nav: agrupa los enlaces de navegación interna -->
@@ -32,6 +47,7 @@
   </nav>
 <!-- cierre de header -->
 </header>
+
 <!-- section id="sobre-mi": acá aterriza el enlace "Sobre mí" del nav -->
 <!-- max-w-5xl mx-auto: limita el ancho del contenido y lo centra -->
 <!-- px-6 py-14: relleno horizontal y vertical de la sección -->
@@ -46,8 +62,7 @@
     <h2 class="text-2xl font-bold mb-3">Sobre mí</h2>
     <!-- text-slate-600: gris para el cuerpo de texto · leading-relaxed: más espacio entre líneas -->
     <p class="text-slate-600 leading-relaxed">
-      Estudio Ing. de software multiplataforma, tome la especialidad de software buscando desarrollar programas de apoyo en sistemas financieros personales como empresariales.
-
+      Estudio Ing. de software multiplataforma, tome la especialidad de software buscando desarrollar programas de apoyo en sistemas financieros personales como empresariales 
     </p>
   <!-- cierre de la primera columna -->
   </div>
@@ -56,12 +71,12 @@
   <!-- rounded-2xl: esquinas bien redondeadas · p-6: relleno interno · border border-slate-200: borde sutil -->
   <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
     <!-- text-slate-500 text-sm: texto gris y chico, de relleno hasta que agregues contenido real -->
-   
-      <img src="fotografia_fondo_blanco.jpg" alt="Fotografía de Hannia" class="w-full rounded-xl">
+    <img class="rounded-full" src="fotografia_fondo_blanco.jpg" alt="...">
   <!-- cierre de la segunda columna -->
   </div>
 <!-- cierre de la sección "sobre-mi" -->
 </section>
+
 <!-- section id="skills": acá aterriza el enlace "Skills" del nav -->
 <!-- bg-slate-50: fondo gris muy claro que separa visualmente esta sección de "sobre-mi" -->
 <!-- py-14: relleno vertical de la sección -->
@@ -90,13 +105,13 @@
         <p class="text-sm text-slate-500">Estilos responsivos utility-first.</p>
       <!-- cierre de la segunda tarjeta -->
       </article>
-      
       <!-- tercera tarjeta: mismo patrón otra vez -->
       <article class="bg-white rounded-xl border border-slate-200 p-5
         shadow-sm hover:shadow-md transition">
         <h3 class="font-semibold mb-1">Git & GitHub</h3>
         <p class="text-sm text-slate-500">Control de versiones y despliegue.</p>
       <!-- cierre de la tercera tarjeta -->
+      
       </article>
     <!-- cierre de la grilla de skills -->
     </div>
@@ -104,6 +119,7 @@
   </div>
 <!-- cierre de la sección "skills" -->
 </section>
+
 <!-- section id="proyectos": acá aterriza el enlace "Proyectos" del nav -->
 <!-- max-w-5xl mx-auto px-6 py-14: mismo contenedor centrado que las secciones anteriores -->
 <section id="proyectos" class="max-w-5xl mx-auto px-6 py-14">
@@ -117,18 +133,29 @@
     <article class="bg-white rounded-2xl border border-slate-200 p-6
       shadow-sm hover:shadow-lg hover:-translate-y-1 transition">
       <!-- text-lg font-bold: nombre del proyecto, más grande que el de skills · mb-2: margen abajo -->
-      <h3 class="text-lg font-bold mb-2">Inntime</h3>
+      <h3 class="text-lg font-bold mb-2">InnTime</h3>
       <!-- text-slate-600 text-sm: descripción breve · mb-4: margen antes del enlace -->
-      <p class="text-slate-600 text-sm mb-4">Gestion de rentas inmobiliarias.</p>
+      <p class="text-slate-600 text-sm mb-4">Solucion en estion de propiedades.</p>
       <!-- text-emerald-700: enlace en verde · hover:underline: subrayado solo al pasar el mouse -->
       <a href="#" class="text-emerald-700 font-semibold text-sm hover:underline">Ver repositorio →</a>
     <!-- cierre de la tarjeta de proyecto -->
     </article>
-        
   <!-- cierre de la grilla de proyectos -->
   </div>
 <!-- cierre de la sección "proyectos" -->
 </section>
+
+
+    <!-- div contenedor: flex flex-col apila las cajas en columna en celular -->
+<!-- md:flex-row: desde 768px cambia a fila · gap-4: separación entre cajas -->
+<div class="flex flex-col md:flex-row gap-4">
+  <!-- primera caja: fondo verde claro y relleno interno -->
+  <div class="bg-emerald-200 p-4">Caja 1</div>
+  <!-- segunda caja: mismo patrón, un tono de verde más oscuro -->
+  <div class="bg-emerald-300 p-4">Caja 2</div>
+<!-- cierre del div contenedor -->
+</div>
+
 <!-- footer id="contacto": acá aterriza el enlace "Contacto" del nav -->
 <!-- bg-slate-900 text-white: mismo tono oscuro que el header, para cerrar la página con el mismo color -->
 <footer id="contacto" class="bg-slate-900 text-white py-14">
@@ -149,6 +176,7 @@
           name="nombre"
           required
           minlength="2"
+          
           placeholder="Tu nombre"
           class="w-full rounded-lg bg-slate-800 border border-slate-700
             px-4 py-2 text-white placeholder-slate-500
@@ -190,7 +218,7 @@
 
       <!-- button type="submit": dispara el envío y activa la validación de todos los campos de arriba -->
       <button type="submit"
-        class="bg-esmerald-600 hover:bg-esmerald-700 transition
+        class="bg-emerald-600 hover:bg-emerald-700 transition
           text-white font-semibold px-6 py-2.5 rounded-lg
           focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-900">
         Enviar
@@ -202,3 +230,5 @@
   </div>
 <!-- cierre de footer -->
 </footer>
+</body>
+</html>
